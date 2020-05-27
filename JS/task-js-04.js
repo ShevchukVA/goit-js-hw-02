@@ -1,17 +1,5 @@
 const formatString = function (string) {
-  const symbols = string.split('');
-
-  if (symbols.length <= 40) {
-    return string;
-  } else {
-    let arrayWords = [];
-    for (let i = 0; i < 40; i += 1) {
-      arrayWords.push(symbols[i]);
-    }
-    arrayWords.splice(40, 1, '...');
-
-    return arrayWords.join('');
-  }
+  return string.length <= 40 ? string : string.slice(0, 40) + '...';
 };
 
 console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
