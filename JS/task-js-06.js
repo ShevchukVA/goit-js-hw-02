@@ -15,7 +15,7 @@ while (input !== null) {
     numbers.push(input);
   }
 }
-if (numbers.length !== 0) {
+if (numbers.length) {
   for (const number of numbers) {
     total += number;
   }
